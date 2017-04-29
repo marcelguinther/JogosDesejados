@@ -1,0 +1,20 @@
+<div class="container">
+
+  <div>
+    <acme-navbar></acme-navbar>
+  </div>
+
+  <div class="jumbotron text-center">
+    <h2>Jogos Desejados</h2>
+    <br>
+    <div ng-repeat="obj in vm.games track by $id(obj)">
+      <p>
+        {{obj.nome}} - {{obj.videoGame}}
+        <buttom class="btn btn-primary" ui-sref="editar({gameId: obj.id})">Editar</buttom>
+        <buttom class="btn btn-primary" ng-click="vm.excluirGame(obj)">Excluir</buttom>
+      </p>
+      <p ng-show=""></p>
+    </div>
+  </div>
+
+</div>

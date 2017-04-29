@@ -1,0 +1,29 @@
+<div class="container">
+  <div>
+    <acme-navbar></acme-navbar>
+  </div>
+
+
+  <div class="jumbotron text-center">
+    <h2>Adicione um game que deseja jogar</h2>
+    <form name="loginForm" ng-submit="vm.addGame(vm.game)" novalidate>
+      <div class="panel-body">
+        <label>Game</label>
+        <input  ng-minlength="1"
+                ng-maxlength="60"
+                type="text"
+                class="form-control"
+                required
+                ng-model="vm.game.nome" />
+        <label>Plataforma (playstation/pc/xbox)</label>
+        <input  ng-minlength="1"
+                ng-maxlength="60"
+                type="text"
+                class="form-control"
+                required
+                ng-model="vm.game.videogame" />
+      </div>
+      <input type="submit" class="btn btn-primary" value="Adicionar" />
+    </form>
+  </div>
+</div>
